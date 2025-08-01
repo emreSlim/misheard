@@ -1,10 +1,9 @@
+require('dotenv').config();
+
 const fs = require('fs');
 const OpenAI = require('openai');
-const { config } = require('dotenv');
 const { AssemblyAI } = require('assemblyai');
-const { Mapping } = require('./constants.js');
-
-config();
+const Mapping = require('./misheard.json');
 
 const client = new AssemblyAI({
   apiKey: process.env.ASSEMBLY_API_KEY,
