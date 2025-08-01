@@ -13,8 +13,6 @@ interface MisheardContextType {
   setAudioSrc: React.Dispatch<React.SetStateAction<string | null>>;
   loading: boolean;
   setLoading: React.Dispatch<React.SetStateAction<boolean>>;
-  youtubeUrl: string;
-  setYoutubeUrl: React.Dispatch<React.SetStateAction<string>>;
   level: number;
   setLevel: React.Dispatch<React.SetStateAction<number>>;
 }
@@ -35,7 +33,6 @@ export const MisheardProvider: React.FC<{ children: React.ReactNode }> = ({
   const [lyrics, setLyrics] = useState<Lyric[]>();
   const [audioSrc, setAudioSrc] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
-  const [youtubeUrl, setYoutubeUrl] = useState<string>('');
   const [level, setLevel] = useState<number>(2);
 
   return (
@@ -47,8 +44,6 @@ export const MisheardProvider: React.FC<{ children: React.ReactNode }> = ({
         setAudioSrc,
         loading,
         setLoading,
-        youtubeUrl,
-        setYoutubeUrl,
         level,
         setLevel,
       }}

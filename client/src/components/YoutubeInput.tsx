@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useMisheard } from './MisheardContext';
 
 export const YoutubeInput: React.FC = () => {
-  const { youtubeUrl, setYoutubeUrl, setAudioSrc, setLyrics, setLoading, level, loading } = useMisheard();
+  const { setAudioSrc, setLyrics, setLoading, level, loading } = useMisheard();
+  const [youtubeUrl, setYoutubeUrl] = useState('');
 
   const handleYoutubeSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
