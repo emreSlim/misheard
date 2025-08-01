@@ -20,7 +20,11 @@ export const KaraokePlayer = ({ audioSrc, lyrics }: KaraokePlayerProps) => {
     const audio = audioRef.current;
     if (!audio) return;
     const handlePlay = () => setIsPlaying(true);
-    const handlePause = () => setIsPlaying(false);
+    const handlePause = () => {
+      setIsPlaying(false);
+      setCurrent('');
+      currentRef.current = '';
+    };
     audio.addEventListener('play', handlePlay);
     audio.addEventListener('pause', handlePause);
     audio.addEventListener('ended', handlePause);
