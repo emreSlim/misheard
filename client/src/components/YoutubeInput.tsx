@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useMisheard } from './MisheardContext';
+import { processYoutube } from '../services/youtubeService';
 
 export const YoutubeInput: React.FC = () => {
   const { setAudioSrc, setLyrics, setLoading, level, loading } = useMisheard();
@@ -12,18 +13,10 @@ export const YoutubeInput: React.FC = () => {
     setLoading(true);
     setAudioSrc(null); // We can later add streaming from backend
 
-    const res = await fetch('http://localhost:3001/youtube', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        url: youtubeUrl,
-        level,
-      }),
-    });
     const data: {
       lyrics: { start: number; end: number; text: string }[];
       audioUrl: string;
-    } = await res.json();
+    } = await processYoutube({ url: youtubeUrl, level });
     setAudioSrc(`http://localhost:3001/uploads/${data.audioUrl}`);
     setLyrics(data.lyrics);
     setLoading(false);
