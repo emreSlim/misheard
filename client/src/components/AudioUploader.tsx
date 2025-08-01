@@ -1,17 +1,27 @@
-import React from 'react';
+
+import React, { useState } from 'react';
 import { useMisheard } from './MisheardContext';
 import { uploadAudio } from '../services/audioUploadService';
 
+
 export const AudioUploader: React.FC = () => {
   const { setLyrics, setAudioSrc, setLoading, level, loading } = useMisheard();
+  const [localAudioUrl, setLocalAudioUrl] = useState<string | null>(null);
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
 
-  const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target?.files?.[0];
     if (!file) return;
+    const url = URL.createObjectURL(file);
+    setLocalAudioUrl(url);
+    setSelectedFile(file);
+  };
 
+  const handleUpload = async () => {
+    if (!selectedFile) return;
     setLoading(true);
-    setAudioSrc(URL.createObjectURL(file)); // Play original file locally
-    const data = await uploadAudio({ audio: file, level });
+    setAudioSrc(localAudioUrl);
+    const data = await uploadAudio({ audio: selectedFile, level });
     setLyrics(data);
     setLoading(false);
   };
@@ -24,10 +34,27 @@ export const AudioUploader: React.FC = () => {
       <input
         type="file"
         accept="audio/*"
-        onChange={handleFileUpload}
+        onChange={handleFileChange}
         className="border-2 border-indigo-200 p-2 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-white shadow-sm file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100 transition"
         disabled={loading}
       />
+      {localAudioUrl && (
+        <div className="flex flex-col gap-2 mt-4">
+          <audio
+            controls
+            src={localAudioUrl}
+            className="w-full rounded shadow bg-indigo-50"
+          />
+          <button
+            type="button"
+            onClick={handleUpload}
+            className="bg-blue-600 text-white px-6 py-2 rounded-full shadow hover:bg-blue-700 transition font-semibold flex items-center gap-2 mx-auto"
+            disabled={loading}
+          >
+            <span className="inline-block text-lg">⬆️</span> Upload
+          </button>
+        </div>
+      )}
     </div>
   );
 };
