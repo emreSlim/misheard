@@ -1,5 +1,9 @@
 import { useState, useRef } from 'react';
+
 import { KaraokePlayer } from './KaraokePlayer';
+import { AudioRecorder } from './AudioRecorder';
+import { AudioUploader } from './AudioUploader';
+import { YoutubeInput } from './YoutubeInput';
 
 export const MisheardLyricsApp = () => {
   const [lyrics, setLyrics] = useState<{ start: number; end: number; text: string }[]>();
@@ -108,44 +112,17 @@ export const MisheardLyricsApp = () => {
 
       <h1 className="text-3xl font-bold mb-4">🎵 Misheard Lyrics Captioner</h1>
 
+
       {/* Audio Recording */}
-      <div className="mb-6">
-        <label className="block mb-2 font-semibold">Record Audio</label>
-        <div className="flex flex-col items-center gap-2">
-          {!recording && (
-            <button
-              type="button"
-              onClick={handleStartRecording}
-              className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
-              disabled={loading}
-            >
-              Start Recording
-            </button>
-          )}
-          {recording && (
-            <button
-              type="button"
-              onClick={handleStopRecording}
-              className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700"
-            >
-              Stop Recording
-            </button>
-          )}
-          {recordedBlob && !recording && (
-            <>
-              <audio controls src={audioSrc || undefined} className="w-full" />
-              <button
-                type="button"
-                onClick={handleUploadRecording}
-                className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 mt-2"
-                disabled={loading}
-              >
-                Upload Recording
-              </button>
-            </>
-          )}
-        </div>
-      </div>
+      <AudioRecorder
+        recording={recording}
+        recordedBlob={recordedBlob}
+        audioSrc={audioSrc}
+        loading={loading}
+        onStart={handleStartRecording}
+        onStop={handleStopRecording}
+        onUpload={handleUploadRecording}
+      />
 
       {/* Level Slider */}
       <div className="mb-6">
@@ -167,37 +144,21 @@ export const MisheardLyricsApp = () => {
         </div>
       </div>
 
+
       {/* File Upload */}
-      <div className="mb-4">
-        <label className="block mb-2 font-semibold">Upload Audio File</label>
-        <input
-          type="file"
-          accept="audio/*"
-          onChange={handleFileUpload}
-          className="border p-2 rounded w-full"
-        />
-      </div>
+      <AudioUploader onFileUpload={handleFileUpload} loading={loading} />
 
       {/* OR Separator */}
       <div className="my-4 text-gray-500">— OR —</div>
 
+
       {/* YouTube URL */}
-      <form onSubmit={handleYoutubeSubmit} className="mb-6">
-        <label className="block mb-2 font-semibold">YouTube Link</label>
-        <input
-          type="url"
-          placeholder="https://youtube.com/watch?v=..."
-          value={youtubeUrl}
-          onChange={(e) => setYoutubeUrl(e.target.value)}
-          className="border p-2 rounded w-full mb-2"
-        />
-        <button
-          type="submit"
-          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-        >
-          Process Song
-        </button>
-      </form>
+      <YoutubeInput
+        youtubeUrl={youtubeUrl}
+        setYoutubeUrl={setYoutubeUrl}
+        onSubmit={handleYoutubeSubmit}
+        loading={loading}
+      />
 
 
 
