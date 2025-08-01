@@ -40,9 +40,9 @@ function mishearWord(word, level) {
   //find the base word without punctuations
   const baseWord = punctuations.filter((p) => p.match(/[\w'-]+/))[0] || '';
 
-  if (Mapping[lower]) {
+  if (Mapping[baseWord]) {
     const misheardWord =
-      Mapping[lower][Math.floor(Math.random() * Mapping[lower].length)];
+      Mapping[baseWord][Math.floor(Math.random() * Mapping[baseWord].length)];
     return punctuations
       .map((p) => (p === baseWord ? misheardWord : p))
       .join('');
