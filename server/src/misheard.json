@@ -2002,5 +2002,1145 @@
     "fester-day",
     "jester-day",
     "tester-day"
+  ],
+  "future": [
+    "suitor",
+    "neuter",
+    "tutor",
+    "scooter"
+  ],
+  "memory": [
+    "emery",
+    "lemony",
+    "remarry",
+    "menagerie"
+  ],
+  "forevermore": [
+    "nevermore",
+    "clever boar",
+    "feather door",
+    "weather store"
+  ],
+  "promise": [
+    "hummus",
+    "Thomas",
+    "comet",
+    "vomit"
+  ],
+  "reason": [
+    "season",
+    "freezin'",
+    "treason",
+    "beacon"
+  ],
+  "danger": [
+    "ranger",
+    "stranger",
+    "changer",
+    "hanger"
+  ],
+  "mirror": [
+    "nearer",
+    "clearer",
+    "dearer",
+    "hear her"
+  ],
+  "story": [
+    "glory",
+    "gory",
+    "tory",
+    "quarry"
+  ],
+  "call": [
+    "mall",
+    "ball",
+    "fall",
+    "crawl"
+  ],
+  "phone": [
+    "cone",
+    "loan",
+    "moan",
+    "tone"
+  ],
+  "door": [
+    "floor",
+    "roar",
+    "pour",
+    "more"
+  ],
+  "window": [
+    "bingo",
+    "limbo",
+    "pinto",
+    "minnow"
+  ],
+  "chair": [
+    "bear",
+    "stare",
+    "pear",
+    "hair"
+  ],
+  "table": [
+    "label",
+    "fable",
+    "cable",
+    "stable"
+  ],
+  "school": [
+    "pool",
+    "cool",
+    "fool",
+    "tool"
+  ],
+  "teacher": [
+    "creature",
+    "preacher",
+    "bleacher",
+    "feature"
+  ],
+  "student": [
+    "prudence",
+    "fluent",
+    "truant",
+    "mutant"
+  ],
+  "class": [
+    "glass",
+    "grass",
+    "mass",
+    "pass"
+  ],
+  "book": [
+    "look",
+    "cook",
+    "hook",
+    "rook"
+  ],
+  "pen": [
+    "hen",
+    "ten",
+    "men",
+    "den"
+  ],
+  "paper": [
+    "taper",
+    "vapor",
+    "shaper",
+    "caper"
+  ],
+  "clock": [
+    "sock",
+    "rock",
+    "block",
+    "dock"
+  ],
+  "watch": [
+    "botch",
+    "notch",
+    "hatch",
+    "patch"
+  ],
+  "ring": [
+    "sing",
+    "wing",
+    "king",
+    "thing"
+  ],
+  "gift": [
+    "lift",
+    "rift",
+    "shift",
+    "swift"
+  ],
+  "money": [
+    "honey",
+    "funny",
+    "bunny",
+    "sunny"
+  ],
+  "rich": [
+    "witch",
+    "ditch",
+    "pitch",
+    "which"
+  ],
+  "poor": [
+    "door",
+    "roar",
+    "pour",
+    "more"
+  ],
+  "job": [
+    "cob",
+    "mob",
+    "sob",
+    "rob"
+  ],
+  "work": [
+    "perk",
+    "jerk",
+    "lurk",
+    "turk"
+  ],
+  "boss": [
+    "moss",
+    "loss",
+    "cross",
+    "floss"
+  ],
+  "office": [
+    "coffees",
+    "cough-is",
+    "off-his",
+    "loft-is"
+  ],
+  "team": [
+    "beam",
+    "dream",
+    "seam",
+    "cream"
+  ],
+  "goal": [
+    "bowl",
+    "mole",
+    "roll",
+    "soul"
+  ],
+  "score": [
+    "bore",
+    "more",
+    "roar",
+    "store"
+  ],
+  "coach": [
+    "roach",
+    "poach",
+    "broach",
+    "approach"
+  ],
+  "bike": [
+    "like",
+    "hike",
+    "pike",
+    "strike"
+  ],
+  "bus": [
+    "fuss",
+    "plus",
+    "thus",
+    "cuss"
+  ],
+  "town": [
+    "gown",
+    "down",
+    "crown",
+    "brown"
+  ],
+  "village": [
+    "pillage",
+    "spillage",
+    "tillage",
+    "millage"
+  ],
+  "country": [
+    "hungry",
+    "entry",
+    "sundry",
+    "laundry"
+  ],
+  "state": [
+    "late",
+    "mate",
+    "fate",
+    "gate"
+  ],
+  "nation": [
+    "station",
+    "ration",
+    "vacation",
+    "creation"
+  ],
+  "flag": [
+    "bag",
+    "rag",
+    "tag",
+    "nag"
+  ],
+  "vote": [
+    "goat",
+    "boat",
+    "coat",
+    "moat"
+  ],
+  "law": [
+    "paw",
+    "saw",
+    "draw",
+    "flaw"
+  ],
+  "court": [
+    "fort",
+    "sort",
+    "port",
+    "short"
+  ],
+  "judge": [
+    "fudge",
+    "budge",
+    "grudge",
+    "smudge"
+  ],
+  "jury": [
+    "fury",
+    "hurry",
+    "blurry",
+    "flurry"
+  ],
+  "case": [
+    "face",
+    "race",
+    "space",
+    "grace"
+  ],
+  "crime": [
+    "rhyme",
+    "slime",
+    "time",
+    "prime"
+  ],
+  "police": [
+    "fleece",
+    "peace",
+    "geese",
+    "lease"
+  ],
+  "arrest": [
+    "rest",
+    "test",
+    "nest",
+    "best"
+  ],
+  "prison": [
+    "risen",
+    "listen",
+    "vision",
+    "mission"
+  ],
+  "cell": [
+    "bell",
+    "well",
+    "tell",
+    "sell"
+  ],
+  "guard": [
+    "card",
+    "hard",
+    "yard",
+    "bard"
+  ],
+  "escape": [
+    "tape",
+    "shape",
+    "grape",
+    "cape"
+  ],
+  "president": [
+    "resident",
+    "hesitant",
+    "peasant",
+    "pleasant"
+  ],
+  "leader": [
+    "reader",
+    "feeder",
+    "cedar",
+    "bleeder"
+  ],
+  "power": [
+    "shower",
+    "tower",
+    "flower",
+    "glower"
+  ],
+  "rule": [
+    "pool",
+    "cool",
+    "fool",
+    "tool"
+  ],
+  "army": [
+    "barmy",
+    "charmy",
+    "almy",
+    "balmy"
+  ],
+  "soldier": [
+    "colder",
+    "boulder",
+    "folder",
+    "shoulder"
+  ],
+  "battle": [
+    "cattle",
+    "rattle",
+    "tattle",
+    "saddle"
+  ],
+  "gun": [
+    "bun",
+    "fun",
+    "run",
+    "nun"
+  ],
+  "bomb": [
+    "calm",
+    "palm",
+    "psalm",
+    "mom"
+  ],
+  "attack": [
+    "snack",
+    "yak",
+    "track",
+    "crack"
+  ],
+  "defend": [
+    "bend",
+    "lend",
+    "send",
+    "pretend"
+  ],
+  "shield": [
+    "field",
+    "wheeled",
+    "sealed",
+    "peeled"
+  ],
+  "armor": [
+    "farmer",
+    "charmer",
+    "parlor",
+    "harbor"
+  ],
+  "partner": [
+    "gardener",
+    "hardener",
+    "martner",
+    "cartner"
+  ],
+  "neighbor": [
+    "saber",
+    "labor",
+    "flavor",
+    "waiver"
+  ],
+  "stranger": [
+    "ranger",
+    "danger",
+    "changer",
+    "hanger"
+  ],
+  "guest": [
+    "nest",
+    "test",
+    "best",
+    "rest"
+  ],
+  "host": [
+    "toast",
+    "most",
+    "post",
+    "roast"
+  ],
+  "group": [
+    "soup",
+    "loop",
+    "coop",
+    "troop"
+  ],
+  "singer": [
+    "ringer",
+    "winger",
+    "linger",
+    "finger"
+  ],
+  "water": [
+    "daughter",
+    "slaughter",
+    "otter",
+    "potter"
+  ],
+  "lake": [
+    "bake",
+    "cake",
+    "make",
+    "rake"
+  ],
+  "grass": [
+    "glass",
+    "class",
+    "mass",
+    "pass"
+  ],
+  "beach": [
+    "peach",
+    "leech",
+    "teach",
+    "reach"
+  ],
+  "island": [
+    "highland",
+    "Thailand",
+    "silent",
+    "violent"
+  ],
+  "animal": [
+    "cannibal",
+    "admiral",
+    "minimal",
+    "criminal"
+  ],
+  "dog": [
+    "fog",
+    "log",
+    "hog",
+    "bog"
+  ],
+  "cat": [
+    "hat",
+    "bat",
+    "rat",
+    "mat"
+  ],
+  "bird": [
+    "word",
+    "heard",
+    "third",
+    "curd"
+  ],
+  "horse": [
+    "force",
+    "course",
+    "source",
+    "morse"
+  ],
+  "cow": [
+    "how",
+    "now",
+    "plow",
+    "vow"
+  ],
+  "sheep": [
+    "deep",
+    "keep",
+    "leap",
+    "cheap"
+  ],
+  "pig": [
+    "big",
+    "dig",
+    "fig",
+    "wig"
+  ],
+  "duck": [
+    "luck",
+    "truck",
+    "pluck",
+    "stuck"
+  ],
+  "lion": [
+    "iron",
+    "tryin'",
+    "cryin'",
+    "dyin'"
+  ],
+  "tiger": [
+    "higher",
+    "flyer",
+    "liar",
+    "buyer"
+  ],
+  "bear": [
+    "hair",
+    "care",
+    "stare",
+    "pair"
+  ],
+  "wolf": [
+    "gulf",
+    "self",
+    "shelf",
+    "elf"
+  ],
+  "snake": [
+    "cake",
+    "lake",
+    "make",
+    "rake"
+  ],
+  "monkey": [
+    "donkey",
+    "funky",
+    "chunky",
+    "hunkey"
+  ],
+  "apple": [
+    "chapel",
+    "snapple",
+    "grapple",
+    "dapple"
+  ],
+  "banana": [
+    "cabana",
+    "savanna",
+    "bandana",
+    "Montana"
+  ],
+  "orange": [
+    "storage",
+    "porridge",
+    "forage",
+    "courage"
+  ],
+  "grape": [
+    "tape",
+    "cape",
+    "shape",
+    "scape"
+  ],
+  "lemon": [
+    "demon",
+    "semen",
+    "women",
+    "he-man"
+  ],
+  "peach": [
+    "beach",
+    "leech",
+    "teach",
+    "reach"
+  ],
+  "pear": [
+    "bear",
+    "hair",
+    "stare",
+    "care"
+  ],
+  "plum": [
+    "drum",
+    "thumb",
+    "some",
+    "gum"
+  ],
+  "berry": [
+    "very",
+    "cherry",
+    "merry",
+    "hairy"
+  ],
+  "melon": [
+    "felon",
+    "yellin'",
+    "sellin'",
+    "tellin'"
+  ],
+  "carrot": [
+    "parrot",
+    "garret",
+    "merit",
+    "ferret"
+  ],
+  "potato": [
+    "tomato",
+    "play-doh",
+    "aflato",
+    "frito"
+  ],
+  "tomato": [
+    "potato",
+    "play-doh",
+    "aflato",
+    "frito"
+  ],
+  "onion": [
+    "funyun",
+    "runyon",
+    "bunion",
+    "minion"
+  ],
+  "bread": [
+    "head",
+    "red",
+    "said",
+    "thread"
+  ],
+  "cheese": [
+    "please",
+    "tease",
+    "seize",
+    "freeze"
+  ],
+  "milk": [
+    "silk",
+    "bilk",
+    "elk",
+    "ilk"
+  ],
+  "egg": [
+    "leg",
+    "beg",
+    "peg",
+    "keg"
+  ],
+  "butter": [
+    "utter",
+    "shutter",
+    "cutter",
+    "gutter"
+  ],
+  "sugar": [
+    "cougar",
+    "rugger",
+    "hugger",
+    "jugger"
+  ],
+  "salt": [
+    "fault",
+    "halt",
+    "vault",
+    "malt"
+  ],
+  "pepper": [
+    "leper",
+    "stepper",
+    "upper",
+    "jumper"
+  ],
+  "rice": [
+    "nice",
+    "dice",
+    "slice",
+    "mice"
+  ],
+  "meat": [
+    "seat",
+    "beat",
+    "heat",
+    "treat"
+  ],
+  "chicken": [
+    "thicken",
+    "quicken",
+    "kickin'",
+    "lickin'"
+  ],
+  "fish": [
+    "dish",
+    "wish",
+    "swish",
+    "finish"
+  ],
+  "soup": [
+    "loop",
+    "group",
+    "coop",
+    "stoop"
+  ],
+  "salad": [
+    "ballad",
+    "pallid",
+    "valid",
+    "mallet"
+  ],
+  "fruit": [
+    "brute",
+    "cute",
+    "mute",
+    "suit"
+  ],
+  "cake": [
+    "bake",
+    "lake",
+    "make",
+    "rake"
+  ],
+  "pie": [
+    "guy",
+    "tie",
+    "my",
+    "sigh"
+  ],
+  "cookie": [
+    "rookie",
+    "bookie",
+    "lookie",
+    "hooky"
+  ],
+  "candy": [
+    "handy",
+    "dandy",
+    "sandy",
+    "brandy"
+  ],
+  "breakfast": [
+    "brake-fast",
+    "back-fist",
+    "bake-fast",
+    "wrecked-fast"
+  ],
+  "dinner": [
+    "winner",
+    "diner",
+    "sinner",
+    "spinner"
+  ],
+  "lunch": [
+    "munch",
+    "bunch",
+    "crunch",
+    "hunch"
+  ],
+  "snack": [
+    "sack",
+    "track",
+    "quack",
+    "crack"
+  ],
+  "coffee": [
+    "cough-fee",
+    "coff-hee",
+    "toffee",
+    "caw-fee"
+  ],
+  "tea": [
+    "tree",
+    "pea",
+    "bee",
+    "sea"
+  ],
+  "juice": [
+    "moose",
+    "loose",
+    "goose",
+    "use"
+  ],
+  "soda": [
+    "yoda",
+    "quota",
+    "oda",
+    "sold-a"
+  ],
+  "jam": [
+    "ham",
+    "lamb",
+    "clam",
+    "ram"
+  ],
+  "honey": [
+    "bunny",
+    "money",
+    "funny",
+    "sunny"
+  ],
+  "cereal": [
+    "serial",
+    "surreal",
+    "seal",
+    "cereal-killer"
+  ],
+  "pasta": [
+    "rasta",
+    "fasta",
+    "casta",
+    "basta"
+  ],
+  "oil": [
+    "boil",
+    "coil",
+    "foil",
+    "toil"
+  ],
+  "vinegar": [
+    "vine-gar",
+    "win-a-car",
+    "fin-agar",
+    "mini-car"
+  ],
+  "ketchup": [
+    "catch-up",
+    "match-up",
+    "fetch-up",
+    "wretch-up"
+  ],
+  "mustard": [
+    "bust-hard",
+    "must-hard",
+    "dust-guard",
+    "mustard-gas"
+  ],
+  "spoon": [
+    "loon",
+    "moon",
+    "soon",
+    "raccoon"
+  ],
+  "fork": [
+    "pork",
+    "stork",
+    "cork",
+    "work"
+  ],
+  "knife": [
+    "life",
+    "strife",
+    "wife",
+    "rife"
+  ],
+  "plate": [
+    "late",
+    "mate",
+    "crate",
+    "fate"
+  ],
+  "bowl": [
+    "troll",
+    "roll",
+    "goal",
+    "mole"
+  ],
+  "cup": [
+    "pup",
+    "sup",
+    "yup",
+    "up"
+  ],
+  "mug": [
+    "hug",
+    "bug",
+    "rug",
+    "slug"
+  ],
+  "napkin": [
+    "nap-king",
+    "nap-can",
+    "map-kin",
+    "cap-kin"
+  ],
+  "pillow": [
+    "willow",
+    "billow",
+    "yellow",
+    "fellow"
+  ],
+  "blanket": [
+    "tank-it",
+    "crank-it",
+    "spank-it",
+    "rank-it"
+  ],
+  "sheet": [
+    "cheat",
+    "meat",
+    "beat",
+    "fleet"
+  ],
+  "towel": [
+    "howl",
+    "foul",
+    "owl",
+    "growl"
+  ],
+  "soap": [
+    "hope",
+    "mope",
+    "rope",
+    "nope"
+  ],
+  "shampoo": [
+    "bamboo",
+    "ramp-who",
+    "camp-who",
+    "sham-who"
+  ],
+  "toothbrush": [
+    "truth-brush",
+    "youth-brush",
+    "booth-crush",
+    "smooth-rush"
+  ],
+  "toothpaste": [
+    "truth-paste",
+    "boot-paste",
+    "hoot-paste",
+    "root-paste"
+  ],
+  "comb": [
+    "bomb",
+    "roam",
+    "foam",
+    "dome"
+  ],
+  "brush": [
+    "rush",
+    "crush",
+    "flush",
+    "hush"
+  ],
+  "shower": [
+    "flower",
+    "power",
+    "tower",
+    "glower"
+  ],
+  "bath": [
+    "math",
+    "path",
+    "wrath",
+    "scath"
+  ],
+  "toilet": [
+    "violet",
+    "pilot",
+    "spoilet",
+    "boil-it"
+  ],
+  "sink": [
+    "pink",
+    "link",
+    "wink",
+    "think"
+  ],
+  "ceiling": [
+    "feeling",
+    "peeling",
+    "wheeling",
+    "dealing"
+  ],
+  "roof": [
+    "goof",
+    "hoof",
+    "woof",
+    "proof"
+  ],
+  "lamp": [
+    "camp",
+    "stamp",
+    "ramp",
+    "tramp"
+  ],
+  "fan": [
+    "van",
+    "man",
+    "can",
+    "tan"
+  ],
+  "remote": [
+    "promote",
+    "demote",
+    "goat",
+    "note"
+  ],
+  "screen": [
+    "green",
+    "bean",
+    "mean",
+    "seen"
+  ],
+  "TV": [
+    "beevee",
+    "tea-vee",
+    "tree-vee",
+    "see-vee"
+  ],
+  "wallet": [
+    "mallet",
+    "pallet",
+    "call it",
+    "fall it"
+  ],
+  "coin": [
+    "loin",
+    "join",
+    "groin",
+    "boing"
+  ],
+  "ticket": [
+    "cricket",
+    "picket",
+    "thicket",
+    "wicked"
+  ],
+  "card": [
+    "lard",
+    "bard",
+    "hard",
+    "yard"
+  ],
+  "taxi": [
+    "maxi",
+    "lax-y",
+    "saxy",
+    "fax-y"
+  ],
+  "store": [
+    "snore",
+    "bore",
+    "roar",
+    "floor"
+  ],
+  "market": [
+    "lark-it",
+    "bark-it",
+    "park-it",
+    "shark-it"
+  ],
+  "computer": [
+    "commuter",
+    "confuser",
+    "con-puter",
+    "rebooter"
+  ],
+  "laptop": [
+    "lap-pop",
+    "tap-top",
+    "nap-top",
+    "rap-top"
+  ],
+  "mouse": [
+    "house",
+    "spouse",
+    "grouse",
+    "douse"
+  ],
+  "keyboard": [
+    "seaboard",
+    "key-bored",
+    "tea-board",
+    "ski-board"
+  ],
+  "bag": [
+    "rag",
+    "tag",
+    "nag",
+    "lag"
+  ],
+  "key": [
+    "bee",
+    "flea",
+    "sea",
+    "tea"
+  ],
+  "park": [
+    "bark",
+    "lark",
+    "shark",
+    "dark"
+  ],
+  "shop": [
+    "mop",
+    "top",
+    "hop",
+    "pop"
   ]
 }

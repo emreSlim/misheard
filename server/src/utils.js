@@ -35,8 +35,17 @@ function mishearWord(word, level) {
   }
 
   const lower = word.toLowerCase();
+  //split punctuations from the word and add it back later apostrophe and hyphen are exception
+  const punctuations = lower.match(/[\w'-]+|[^\w'-]+/g) || [];
+  //find the base word without punctuations
+  const baseWord = punctuations.filter((p) => p.match(/[\w'-]+/))[0] || '';
+
   if (Mapping[lower]) {
-    return Mapping[lower][Math.floor(Math.random() * Mapping[lower].length)];
+    const misheardWord =
+      Mapping[lower][Math.floor(Math.random() * Mapping[lower].length)];
+    return punctuations
+      .map((p) => (p === baseWord ? misheardWord : p))
+      .join('');
   }
   return word;
 }
