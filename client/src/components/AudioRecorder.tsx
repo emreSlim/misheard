@@ -1,21 +1,20 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { useMisheard } from './MisheardContext';
 
 export const AudioRecorder: React.FC = () => {
   const {
-    recording,
-    setRecording,
-    recordedBlob,
-    setRecordedBlob,
     audioSrc,
     setAudioSrc,
     loading,
     setLoading,
     level,
-    mediaRecorderRef,
-    audioChunksRef,
     setLyrics,
   } = useMisheard();
+
+  const [recording, setRecording] = useState(false);
+  const [recordedBlob, setRecordedBlob] = useState<Blob | null>(null);
+  const mediaRecorderRef = useRef<MediaRecorder | null>(null);
+  const audioChunksRef = useRef<Blob[]>([]);
 
   const handleStartRecording = async () => {
     setRecordedBlob(null);
