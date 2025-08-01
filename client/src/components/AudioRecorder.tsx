@@ -59,39 +59,41 @@ export const AudioRecorder: React.FC = () => {
 
   return (
     <div className="mb-6">
-      <label className="block mb-2 font-semibold">Record Audio</label>
-      <div className="flex flex-col items-center gap-2">
+      <label className="block mb-3 text-lg font-semibold text-indigo-700 flex items-center gap-2">
+        <span className="inline-block text-2xl">🎤</span> Record Audio
+      </label>
+      <div className="flex flex-col items-center gap-3">
         {!recording && (
           <button
             type="button"
             onClick={handleStartRecording}
-            className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
+            className="bg-green-500 text-white px-6 py-2 rounded-full shadow hover:bg-green-600 transition font-semibold flex items-center gap-2"
             disabled={loading}
           >
-            Start Recording
+            <span className="inline-block text-lg">●</span> Start Recording
           </button>
         )}
         {recording && (
           <button
             type="button"
             onClick={handleStopRecording}
-            className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700"
+            className="bg-red-500 text-white px-6 py-2 rounded-full shadow hover:bg-red-600 transition font-semibold flex items-center gap-2 animate-pulse"
           >
-            Stop Recording
+            <span className="inline-block text-lg">■</span> Stop Recording
           </button>
         )}
         {recordedBlob && !recording && (
-          <>
-            <audio controls src={audioSrc || undefined} className="w-full" />
+          <div className="w-full flex flex-col items-center gap-2 mt-2">
+            <audio controls src={audioSrc || undefined} className="w-full rounded shadow" />
             <button
               type="button"
               onClick={handleUploadRecording}
-              className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 mt-2"
+              className="bg-blue-600 text-white px-6 py-2 rounded-full shadow hover:bg-blue-700 transition font-semibold mt-1 flex items-center gap-2"
               disabled={loading}
             >
-              Upload Recording
+              <span className="inline-block text-lg">⬆️</span> Upload Recording
             </button>
-          </>
+          </div>
         )}
       </div>
     </div>

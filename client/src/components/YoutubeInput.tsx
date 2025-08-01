@@ -24,21 +24,23 @@ export const YoutubeInput: React.FC = () => {
 
   return (
     <form onSubmit={handleYoutubeSubmit} className="mb-6">
-      <label className="block mb-2 font-semibold">YouTube Link</label>
+      <label className="block mb-3 text-lg font-semibold text-indigo-700 flex items-center gap-2">
+        <span className="inline-block text-2xl">▶️</span> YouTube Link
+      </label>
       <input
         type="url"
         placeholder="https://youtube.com/watch?v=..."
         value={youtubeUrl}
         onChange={(e) => setYoutubeUrl(e.target.value)}
-        className="border p-2 rounded w-full mb-2"
+        className="border-2 border-indigo-200 p-2 rounded-lg w-full mb-3 focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-white shadow-sm transition"
         disabled={loading}
       />
       <button
         type="submit"
-        className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+        className="bg-blue-600 text-white px-6 py-2 rounded-full shadow hover:bg-blue-700 transition font-semibold flex items-center gap-2 mx-auto"
         disabled={loading}
       >
-        Process Song
+        <span className="inline-block text-lg">🎬</span> Process Song
       </button>
     </form>
   );

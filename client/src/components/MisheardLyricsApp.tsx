@@ -18,26 +18,52 @@ export const MisheardLyricsApp = () => {
 const InnerMisheardLyricsApp = () => {
   const { audioSrc, loading, lyrics } = useMisheard();
   return (
-    <div className="max-w-lg mx-auto p-4 text-center">
-      <h1 className="text-3xl font-bold mb-4">🎵 Misheard Lyrics Captioner</h1>
-      {/* Audio Recording */}
-      <AudioRecorder />
-      {/* Level Slider */}
-      <LevelSlider />
-      {/* File Upload */}
-      <AudioUploader />
-      {/* OR Separator */}
-      <div className="my-4 text-gray-500">— OR —</div>
-      {/* YouTube URL */}
-      <YoutubeInput />
-      {/* Loading Indicator */}
-      {loading && <p className="text-lg font-semibold">Processing... 🎤</p>}
-      {/* Karaoke Player */}
-      {audioSrc && !loading && lyrics && (
-        <div className="mt-6">
-          <KaraokePlayer audioSrc={audioSrc} lyrics={lyrics} />
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center py-8 px-2">
+      <div className="w-full max-w-5xl bg-white/90 shadow-2xl rounded-3xl p-8 border border-indigo-100">
+        <div className="flex flex-col gap-4">
+          {/* Card header: Title left, LevelSlider right */}
+          <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-2 gap-2">
+            <div className="flex flex-col">
+              <h1 className="text-4xl font-extrabold text-indigo-700 flex items-center gap-2 drop-shadow-sm">
+                <span role="img" aria-label="music">🎵</span> Misheard Lyrics Captioner
+              </h1>
+              <p className="mt-1 text-base text-indigo-500 font-medium max-w-xl">
+                Instantly generate karaoke-style captions for your music by recording, uploading, or pasting a YouTube link. Perfect for discovering and sharing those hilarious misheard lyrics!
+              </p>
+            </div>
+            <div className="md:ml-auto md:mt-0 mt-2"><LevelSlider /></div>
+          </div>
+          <div className="flex flex-col md:flex-row gap-8 items-stretch">
+            {/* Left: Inputs */}
+            <div className="w-full md:w-1/2 flex flex-col justify-center">
+              {/* Inputs in a common container with OR separators */}
+              <div className="bg-indigo-50 rounded-2xl p-6 shadow-md border border-indigo-100 flex flex-col gap-6">
+                <AudioRecorder />
+                <div className="flex items-center my-2">
+                  <div className="flex-grow border-t border-gray-300"></div>
+                  <span className="mx-4 text-gray-400 font-bold tracking-widest">OR</span>
+                  <div className="flex-grow border-t border-gray-300"></div>
+                </div>
+                <AudioUploader />
+                <div className="flex items-center my-2">
+                  <div className="flex-grow border-t border-gray-300"></div>
+                  <span className="mx-4 text-gray-400 font-bold tracking-widest">OR</span>
+                  <div className="flex-grow border-t border-gray-300"></div>
+                </div>
+                <YoutubeInput />
+              </div>
+              {/* Loading Indicator */}
+              {loading && <p className="text-lg font-semibold text-indigo-700 mt-6 animate-pulse">Processing... 🎤</p>}
+            </div>
+            {/* Right: Karaoke Player (inside the same card) */}
+            {audioSrc && !loading && lyrics && (
+              <div className="w-full md:w-1/2 flex items-center justify-center">
+                <KaraokePlayer audioSrc={audioSrc} lyrics={lyrics} />
+              </div>
+            )}
+          </div>
         </div>
-      )}
+      </div>
     </div>
   );
 };
