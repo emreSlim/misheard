@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { useMisheard } from './MisheardContext';
+import { uploadAudio } from '../services/audioUploadService';
 
 export const AudioRecorder: React.FC = () => {
   const {
@@ -51,14 +52,7 @@ export const AudioRecorder: React.FC = () => {
     if (!recordedBlob) return;
     setLoading(true);
     setAudioSrc(URL.createObjectURL(recordedBlob));
-    const formData = new FormData();
-    formData.append('audio', recordedBlob, 'recording.webm');
-    formData.append('level', level.toString());
-    const res = await fetch('http://localhost:3001/upload', {
-      method: 'POST',
-      body: formData,
-    });
-    const data = await res.json();
+    const data = await uploadAudio({ audio: recordedBlob, level });
     setLyrics(data);
     setLoading(false);
   };

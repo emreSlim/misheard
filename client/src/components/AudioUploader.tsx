@@ -1,5 +1,6 @@
 import React from 'react';
 import { useMisheard } from './MisheardContext';
+import { uploadAudio } from '../services/audioUploadService';
 
 export const AudioUploader: React.FC = () => {
   const { setLyrics, setAudioSrc, setLoading, level, loading } = useMisheard();
@@ -10,15 +11,7 @@ export const AudioUploader: React.FC = () => {
 
     setLoading(true);
     setAudioSrc(URL.createObjectURL(file)); // Play original file locally
-
-    const formData = new FormData();
-    formData.append('audio', file);
-    formData.append('level', level.toString());
-    const res = await fetch('http://localhost:3001/upload', {
-      method: 'POST',
-      body: formData,
-    });
-    const data = await res.json();
+    const data = await uploadAudio({ audio: file, level });
     setLyrics(data);
     setLoading(false);
   };
