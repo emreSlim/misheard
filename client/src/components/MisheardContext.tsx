@@ -31,9 +31,14 @@ export const MisheardProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
   const [lyrics, setLyrics] = useState<Lyric[]>();
-  const [audioSrc, setAudioSrc] = useState<string | null>(null);
+  const [audioSrc, _setAudioSrc] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
   const [level, setLevel] = useState<number>(2);
+
+  const setAudioSrc: typeof _setAudioSrc = (src) => {
+    setLyrics(undefined);
+    _setAudioSrc(src);
+  };
 
   return (
     <MisheardContext.Provider
