@@ -17,7 +17,7 @@ export const YoutubeInput: React.FC = () => {
       lyrics: { start: number; end: number; text: string }[];
       audioUrl: string;
     } = await processYoutube({ url: youtubeUrl, level });
-    setAudioSrc(`http://localhost:3001/uploads/${data.audioUrl}`);
+    setAudioSrc(`${import.meta.env.VITE_API_BASE_URL}/uploads/${data.audioUrl}`);
     setLyrics(data.lyrics);
     setLoading(false);
   };

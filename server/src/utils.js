@@ -1,15 +1,11 @@
-require('dotenv').config();
 
 const fs = require('fs');
-const OpenAI = require('openai');
 const { AssemblyAI } = require('assemblyai');
 const Mapping = require('./misheard.json');
 
 const client = new AssemblyAI({
   apiKey: process.env.ASSEMBLY_API_KEY,
 });
-
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 async function getMisheardLyrics(audioPath, level = 2) {
   const params = {
