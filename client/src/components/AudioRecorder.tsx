@@ -1,10 +1,12 @@
+
 import React, { useRef, useState } from 'react';
 import { useMisheard } from './MisheardContext';
 import { uploadAudio } from '../services/audioUploadService';
+import { ActionButton } from './ActionButton';
+
 
 export const AudioRecorder: React.FC = () => {
   const {
-    audioSrc,
     setAudioSrc,
     loading,
     setLoading,
@@ -14,12 +16,12 @@ export const AudioRecorder: React.FC = () => {
 
   const [recording, setRecording] = useState(false);
   const [recordedBlob, setRecordedBlob] = useState<Blob | null>(null);
+  const [localAudioUrl, setLocalAudioUrl] = useState<string | null>(null);
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
   const audioChunksRef = useRef<Blob[]>([]);
 
   const handleStartRecording = async () => {
     setRecordedBlob(null);
-    setAudioSrc(null);
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
       const mediaRecorder = new window.MediaRecorder(stream);
@@ -31,7 +33,8 @@ export const AudioRecorder: React.FC = () => {
       mediaRecorder.onstop = () => {
         const blob = new Blob(audioChunksRef.current, { type: 'audio/webm' });
         setRecordedBlob(blob);
-        setAudioSrc(URL.createObjectURL(blob));
+        const url = URL.createObjectURL(blob);
+        setLocalAudioUrl(url);
       };
       mediaRecorder.start();
       setRecording(true);
@@ -51,8 +54,8 @@ export const AudioRecorder: React.FC = () => {
   const handleUploadRecording = async () => {
     if (!recordedBlob) return;
     setLoading(true);
-    setAudioSrc(URL.createObjectURL(recordedBlob));
     const data = await uploadAudio({ audio: recordedBlob, level });
+    setAudioSrc(localAudioUrl || '');
     setLyrics(data);
     setLoading(false);
   };
@@ -82,17 +85,12 @@ export const AudioRecorder: React.FC = () => {
             <span className="inline-block text-lg">■</span> Stop Recording
           </button>
         )}
-        {recordedBlob && !recording && (
+        {localAudioUrl && recordedBlob && !recording && (
           <div className="w-full flex flex-col items-center gap-2 mt-2">
-            <audio controls src={audioSrc || undefined} className="w-full rounded shadow" />
-            <button
-              type="button"
-              onClick={handleUploadRecording}
-              className="bg-blue-600 text-white px-6 py-2 rounded-full shadow hover:bg-blue-700 transition font-semibold mt-1 flex items-center gap-2"
-              disabled={loading}
-            >
+            <audio controls src={localAudioUrl} className="w-full rounded shadow" />
+            <ActionButton type="button" onClick={handleUploadRecording} disabled={loading} className="mt-1">
               <span className="inline-block text-lg">⬆️</span> Upload Recording
-            </button>
+            </ActionButton>
           </div>
         )}
       </div>

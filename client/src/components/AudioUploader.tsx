@@ -1,7 +1,9 @@
 
+
 import React, { useState } from 'react';
 import { useMisheard } from './MisheardContext';
 import { uploadAudio } from '../services/audioUploadService';
+import { ActionButton } from './ActionButton';
 
 
 export const AudioUploader: React.FC = () => {
@@ -20,8 +22,8 @@ export const AudioUploader: React.FC = () => {
   const handleUpload = async () => {
     if (!selectedFile) return;
     setLoading(true);
-    setAudioSrc(localAudioUrl);
     const data = await uploadAudio({ audio: selectedFile, level });
+    setAudioSrc(localAudioUrl);
     setLyrics(data);
     setLoading(false);
   };
@@ -45,14 +47,9 @@ export const AudioUploader: React.FC = () => {
             src={localAudioUrl}
             className="w-full rounded shadow bg-indigo-50"
           />
-          <button
-            type="button"
-            onClick={handleUpload}
-            className="bg-blue-600 text-white px-6 py-2 rounded-full shadow hover:bg-blue-700 transition font-semibold flex items-center gap-2 mx-auto"
-            disabled={loading}
-          >
+          <ActionButton type="button" onClick={handleUpload} disabled={loading}>
             <span className="inline-block text-lg">⬆️</span> Upload
-          </button>
+          </ActionButton>
         </div>
       )}
     </div>
